@@ -1,0 +1,23 @@
+I"}(function() {
+  $(function() {
+    $(document).on('change', '#gloabl_dropdown', function(evt) {
+      return $.ajax('update_trackings/' + encodeURIComponent($("#gloabl_dropdown option:selected").text()), {
+        type: 'GET'
+      });
+    });
+    return {
+      dataType: 'script',
+      data: {
+        page_url: $("#gloabl_dropdown option:selected").text()
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        return console.log("AJAX Error: " + textStatus);
+      },
+      success: function(data, textStatus, jqXHR) {
+        return console.log("Dynamic country select OK!");
+      }
+    };
+  });
+
+}).call(this);
+:ET

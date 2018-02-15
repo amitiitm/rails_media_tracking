@@ -1,0 +1,29 @@
+############################ Steps to run this app ###############################
+
+### gem install bundler - if not installed already
+
+### bundle install - To install all gems defined in Gemfile
+
+### rake db:migrate - To run all migration files
+
+### rake db:seed - To create an default admin use to login (username can be changed from config/secrets.yml)
+
+### run rails s - To start rails server
+
+### Login using below credentials for admin user
+
+username : testuser@gmail.com
+password : test1234
+
+
+########################### Project Description ##############################
+
+This application is a simple CRUD application which support authentication using device gem.
+
+user signup and signin feature has been implemented using devise Authentication engine. Initially there will be a admin account created using database seed file, which creates a default admin user in mysql database (testuser@gmail.com)
+
+This user when login in, will be redirected to Trackings dashboard (which is the home to to perform CRUD operation on trackings resource)
+
+Also differnt roles have been used in this application like Vip/User/Admin, which admin can only change from users screen.
+
+Here user can create/edit/update/delete all kinds of trackings. This application can be extended to variety of different use cases
